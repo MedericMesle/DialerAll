@@ -19,6 +19,13 @@ class GrindsController < ApplicationController
     redirect_to grind_path(@grind)
   end
 
+  def destroy
+    @grind = Grind.find(params[:id])
+    @grind.destroy
+
+    redirect_to grind_path(@grind)
+  end
+
   private
   def grind_params
     params.require(:grind).permit(:grinder_setting, :coffee_name, :extraction_type, :comments)

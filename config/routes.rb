@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "grinds/new", to: "grinds#new", as: :new_grind
   post "grinds", to: "grinds#create"
   get "grinds/:id", to: "grinds#show", as: :grind
+  delete "grinds/:id", to: "grinds#destroy"
 end
