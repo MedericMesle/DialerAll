@@ -1,5 +1,8 @@
 <h1>Here you will find all your grinds</h1>
 
+<h3>Log a new brew</h3>
+<%= link_to new_grind_path %>
+
 <ol>
   <% @grinds.each do |grind| %>
     <ul>Grinder setting: <%= grind.grinder_setting %></li>
