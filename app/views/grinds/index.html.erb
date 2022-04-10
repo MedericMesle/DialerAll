@@ -1,0 +1,10 @@
+<h1>Here you will find all your grinds</h1>
+
+<ol>
+  <% @grinds.each do |grind| %>
+    <ul>Grinder setting: <%= grind.grinder_setting %></li>
+    <ul>Coffee name: <%= grind.coffee_name %></ul>
+    <ul>Extraction type: <%= grind.extraction_type %></ul>
+    <ul>Comments: <%= grind.comments %></ul>
+  <% end %>
+</ol>
