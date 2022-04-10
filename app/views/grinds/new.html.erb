@@ -1,3 +1,6 @@
+<h3>What are we grinding ?</h3>
+
+
 <%= form_for(@grind) do |f| %>
   <%= f.label :grinder_setting %>
   <%= f.number_field :grinder_setting %>
@@ -9,3 +12,6 @@
   <%= f.text_field :comments %>
   <%= f.submit %>
 <% end %>
+
+
+<%= link_to "Back to your grinds", grinds_path %>
