@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   # grinds routes
   get 'grinds', to: 'grinds#index'
+  get "grinds/new", to: "grinds#new", as: :new_grind
+  post "grinds", to: "grinds#create"
   get "grinds/:id", to: "grinds#show", as: :grind
 end

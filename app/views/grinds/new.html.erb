@@ -1,0 +1,11 @@
+<%= form_for(@grind) do |f| %>
+  <%= f.label :grinder_setting %>
+  <%= f.number_field :grinder_setting %>
+  <%= f.label :coffee_name %>
+  <%= f.text_field :coffee_name %>
+  <%= f.label :extraction_type %>
+  <%= f.text_field :extraction_type %>
+    <%= f.label :comments %>
+  <%= f.text_field :comments %>
+  <%= f.submit %>
+<% end %>

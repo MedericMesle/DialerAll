@@ -8,4 +8,21 @@ class GrindsController < ApplicationController
     @grind = Grind.find(params[:id])
   end
 
+  def new
+    @grind = Grind.new
+  end
+
+  def create
+    @grind = Grind.new(grind_params)
+    @grind.save
+
+    redirect_to grind_path(@grind)
+  end
+
+  private
+  def grind_params
+    params.require(:grind).permit(:grinder_setting, :coffee_name, :extraction_type, :comments)
+  end
+
+
 end
