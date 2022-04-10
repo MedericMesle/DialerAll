@@ -3,6 +3,8 @@
 <p><%= @grind.extraction_type %></p>
 <p><%= @grind.comments %></p>
 
+<%= link_to "Back to your grinds", grinds_path %>
+
 <%= link_to "Delete #{@grind}",
             grind_path(@grind),
             method: :delete,
