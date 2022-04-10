@@ -4,4 +4,8 @@ class GrindsController < ApplicationController
     @grinds = Grind.all
   end
 
+  def show
+    @grind = Grind.find(params[:id])
+  end
+
 end
