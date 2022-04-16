@@ -28,7 +28,7 @@ class GrindsController < ApplicationController
 
   private
   def grind_params
-    params.require(:grind).permit(:grinder_setting, :coffee_name, :extraction_type, :comments)
+    params.require(:grind).permit(:grinder_name, :grinder_setting, :coffee_name, :extraction_type, :comments)
   end
 
 
