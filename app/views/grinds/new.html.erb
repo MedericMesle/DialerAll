@@ -1,19 +1,29 @@
-<h3>What are we grinding ?</h3>
+
+<div class="container">
+  <h3>Remember, remember that grind last december</h3>
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      Grind date
+    </div>
+    <%= form_for(@grind) do |f| %>
+    <ul class="list-group list-group-flush">
+      <%= f.label :grinder_name%>
+      <%= f.text_field :grinder_name %>
+      <%= f.label :grinder_setting %>
+      <%= f.number_field :grinder_setting %>
+      <%= f.label :coffee_name %>
+      <%= f.text_field :coffee_name %>
+      <%= f.label :extraction_type %>
+      <%= f.text_field :extraction_type %>
+      <%= f.label :comments %>
+      <%= f.text_field :comments %>
+    </ul>
+    <%= f.submit %>
+  <% end %>
+  </div>
 
 
-<%= form_for(@grind) do |f| %>
-  <%= f.label :grinder_name%>
-  <%= f.text_field :grinder_name %>
-  <%= f.label :grinder_setting %>
-  <%= f.number_field :grinder_setting %>
-  <%= f.label :coffee_name %>
-  <%= f.text_field :coffee_name %>
-  <%= f.label :extraction_type %>
-  <%= f.text_field :extraction_type %>
-    <%= f.label :comments %>
-  <%= f.text_field :comments %>
-  <%= f.submit %>
-<% end %>
 
-
-<%= link_to "Back to your grinds", grinds_path %>
+  <%= link_to "Back to your grinds", grinds_path %>
+</div>
