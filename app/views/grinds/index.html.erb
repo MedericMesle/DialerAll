@@ -1,12 +1,20 @@
-<h1>Here you will find all your grinds</h1>
 
-<%= link_to "Log a new grind", new_grind_path %>
+<div class="container">
+  <h1>Here you will find all your grinds</h1>
 
-<ol>
+  <%= link_to "Log a new grind", new_grind_path %>
+
+  <div class="card" style="width: 18rem;">
   <% @grinds.each do |grind| %>
-    <ul>Grinder setting: <%= grind.grinder_setting %></li>
-    <ul>Coffee name: <%= grind.coffee_name %></ul>
-    <ul>Extraction type: <%= grind.extraction_type %></ul>
-    <ul>Comments: <%= grind.comments %></ul>
-  <% end %>
-</ol>
+    <div class="card-header">
+      Grind
+    </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Grinder setting: <%= grind.grinder_setting %></li>
+        <li class="list-group-item">Coffee name: <%= grind.coffee_name %></li>
+        <li class="list-group-item">Extraction type: <%= grind.extraction_type %></li>
+        <li class="list-group-item">Comments: <%= grind.comments %></li>
+      </ul>
+    <% end %>
+  </div>
+</div>
