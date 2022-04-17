@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'grinds#index'
 
   # grinds routes
   get 'grinds', to: 'grinds#index'
