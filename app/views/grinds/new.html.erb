@@ -8,7 +8,9 @@
     </div>
     <%= form_for(@grind) do |f| %>
     <ul class="list-group list-group-flush">
-      <%= f.label :grinder_name%>
+      <%= f.label :grind_name %>
+      <%= f.text_field :grind_name %>
+      <%= f.label :grinder_name %>
       <%= f.text_field :grinder_name %>
       <%= f.label :grinder_setting %>
       <%= f.number_field :grinder_setting %>
