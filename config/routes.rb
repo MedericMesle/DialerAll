@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'grinds#index'
 
   # grinds routes
-  get 'grinds', to: 'grinds#index'
+  get 'grinds', to: 'grinds#home'
   get "grinds/new", to: "grinds#new", as: :new_grind
   post "grinds", to: "grinds#create"
   get "grinds/:id", to: "grinds#show", as: :grind
