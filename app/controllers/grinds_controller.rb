@@ -5,7 +5,11 @@ class GrindsController < ApplicationController
   end
 
   def show
-    @grind = Grind.find(params[:id])
+    if (params[:id])
+      @grind = Grind.find(params[:id])
+    else
+      redirect_to grind_path
+    end
   end
 
   def new
