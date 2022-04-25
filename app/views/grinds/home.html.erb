@@ -2,23 +2,24 @@
 <div class="container">
   <h1 class="main_title">Here you will find all your grinds</h1>
 
-<button type="button" class="btn btn-outline-secondary"> <%= link_to "Log a new grind", new_grind_path %>
-</button>
+  <div>
+    <%= link_to "Log a new grind", new_grind_path, class: "btn btn-ghost" %>
+  </div>
 
-
-
-  <div class="card" style="width: 18rem;">
-  <% @grinds.each do |grind| %>
-    <div class="card-header">
-    <p style="bold"><%= grind.grind_name %></p>
+  <div class="cards">
+    <div class="card-category" >
+      <% @grinds.each do |grind| %>
+      <div class="card-header">
+      <p style="bold"><%= grind.grind_name %></p>
+      </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Grinder: <%= grind.grinder_name %></li>
+          <li class="list-group-item">Grinder setting: <%= grind.grinder_setting %></li>
+          <li class="list-group-item">Coffee name: <%= grind.coffee_name %></li>
+          <li class="list-group-item">Extraction type: <%= grind.extraction_type %></li>
+          <li class="list-group-item">Comments: <%= grind.comments %></li>
+        </ul>
+      <% end %>
     </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Grinder: <%= grind.grinder_name %></li>
-        <li class="list-group-item">Grinder setting: <%= grind.grinder_setting %></li>
-        <li class="list-group-item">Coffee name: <%= grind.coffee_name %></li>
-        <li class="list-group-item">Extraction type: <%= grind.extraction_type %></li>
-        <li class="list-group-item">Comments: <%= grind.comments %></li>
-      </ul>
-    <% end %>
   </div>
 </div>
