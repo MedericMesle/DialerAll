@@ -1,3 +1,13 @@
-.new-card{
-  width: fit-content;
+.new-grind-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.back_to_home_btn{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 50px;
 }
