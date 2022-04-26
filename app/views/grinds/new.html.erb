@@ -1,31 +1,32 @@
 
 <div class="container">
-  <h3>Remember, remember that grind last december</h3>
+  <h3 class="main_title">Remember, remember that grind last december</h3>
 
-  <div class="card" style="width: 18rem;">
-    <div class="card-header">
-      Grind date
+  <div class="new-card">
+    <div class="card-category">
+      <%= form_for(@grind) do |f| %>
+        <ul class="list-group list-group-flush">
+          <%= f.label :grind_name %>
+          <%= f.text_field :grind_name %>
+          <%= f.label :grinder_name %>
+          <%= f.text_field :grinder_name %>
+          <%= f.label :grinder_setting %>
+          <%= f.number_field :grinder_setting %>
+          <%= f.label :coffee_name %>
+          <%= f.text_field :coffee_name %>
+          <%= f.label :extraction_type %>
+          <%= f.text_field :extraction_type %>
+          <%= f.label :comments %>
+          <%= f.text_field :comments %>
+        </ul>
+        <%= f.submit %>
+      <% end %>
     </div>
-    <%= form_for(@grind) do |f| %>
-    <ul class="list-group list-group-flush">
-      <%= f.label :grind_name %>
-      <%= f.text_field :grind_name %>
-      <%= f.label :grinder_name %>
-      <%= f.text_field :grinder_name %>
-      <%= f.label :grinder_setting %>
-      <%= f.number_field :grinder_setting %>
-      <%= f.label :coffee_name %>
-      <%= f.text_field :coffee_name %>
-      <%= f.label :extraction_type %>
-      <%= f.text_field :extraction_type %>
-      <%= f.label :comments %>
-      <%= f.text_field :comments %>
-    </ul>
-    <%= f.submit %>
-  <% end %>
+  </div>
+
+  <div class="back_to_home_btn">
+    <%= link_to "Back to your grinds", grinds_path, class: "btn btn-ghost" %>
   </div>
 
 
-
-  <%= link_to "Back to your grinds", grinds_path %>
 </div>

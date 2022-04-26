@@ -7,11 +7,11 @@
   </div>
 
   <div class="cards">
-    <div class="card-category" >
-      <% @grinds.each do |grind| %>
-      <div class="card-header">
-      <p style="bold"><%= grind.grind_name %></p>
-      </div>
+    <% @grinds.each do |grind| %>
+      <div class="card-category" >
+        <div class="card-header">
+          <p style="bold"><%= grind.grind_name %></p>
+        </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">Grinder: <%= grind.grinder_name %></li>
           <li class="list-group-item">Grinder setting: <%= grind.grinder_setting %></li>
@@ -19,7 +19,7 @@
           <li class="list-group-item">Extraction type: <%= grind.extraction_type %></li>
           <li class="list-group-item">Comments: <%= grind.comments %></li>
         </ul>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
