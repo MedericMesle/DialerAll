@@ -7,3 +7,5 @@ Simple CRUD app because I grind my coffee every morning, and I can never remembe
 
 This is made to be simple; keep track of what you did, what you liked and what you didn't. 
 </p>
+
+<p>https://dialerall.herokuapp.com/grinds<p/>
