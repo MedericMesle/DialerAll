@@ -1,19 +1,21 @@
 
 <div class="container">
-  <div class="card" style="width: 18rem;">
+<div class="new_container">
+  <div class="card" style="width: 25rem;">
     <%= image_tag("card_badge.jpg") %>
     <div class="card-body">
-      <h5 class="card-title"><%= @grind.grind_name %></h5>
-      <p class="card-text">This is what you did.</p>
+      <h3 class="card-title"><u>This is what you did.</u></h3>
+      <h3 class="card-text"><%= @grind.grind_name %></h3>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item"><%= @grind.coffee_name %></li>
-      <li class="list-group-item"><%= @grind.extraction_type %></li>
-      <li class="list-group-item"><%= @grind.comments %></li>
+      <li class="list-group-item">Coffee name: <%= @grind.coffee_name %></li>
+      <li class="list-group-item">Extraction type: <%= @grind.extraction_type %></li>
+      <li class="list-group-item">What you thought: <%= @grind.comments %></li>
     </ul>
     <div class="card-body">
-      <a href="#" class="card-link"><%= link_to "Back to your grinds", grinds_path %></a>
-      <a href="#" class="card-link"><%= link_to "Delete #{@grind}", grind_path(@grind), method: :delete, data: { confirm: "Are you sure?" } %></a>
+      <%= link_to "Back to your grinds", grinds_path %>
+      <%= link_to "Delete", grind_path(@grind), method: :delete, data: { confirm: "Are you sure?" } %>
     </div>
   </div>
+</div>
 </div>

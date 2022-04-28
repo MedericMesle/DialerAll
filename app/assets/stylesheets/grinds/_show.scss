@@ -1,0 +1,17 @@
+.new_container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+.card-body{
+  display: flex;
+  justify-content: space-around;
+  a{
+    color: black !important;
+    text-decoration: none;
+    background-color: transparent;
+  }
+}
