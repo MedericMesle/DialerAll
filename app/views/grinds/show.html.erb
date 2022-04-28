@@ -1,12 +1,19 @@
-<p><%= @grind.grind_name %></p>
-<p><%= @grind.grinder_setting %></p>
-<p><%= @grind.coffee_name %></p>
-<p><%= @grind.extraction_type %></p>
-<p><%= @grind.comments %></p>
 
-<%= link_to "Back to your grinds", grinds_path %>
-
-<%= link_to "Delete #{@grind}",
-            grind_path(@grind),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
+<div class="container">
+  <div class="card" style="width: 18rem;">
+    <%= image_tag("card_badge.jpg") %>
+    <div class="card-body">
+      <h5 class="card-title"><%= @grind.grind_name %></h5>
+      <p class="card-text">This is what you did.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><%= @grind.coffee_name %></li>
+      <li class="list-group-item"><%= @grind.extraction_type %></li>
+      <li class="list-group-item"><%= @grind.comments %></li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link"><%= link_to "Back to your grinds", grinds_path %></a>
+      <a href="#" class="card-link"><%= link_to "Delete #{@grind}", grind_path(@grind), method: :delete, data: { confirm: "Are you sure?" } %></a>
+    </div>
+  </div>
+</div>
